@@ -6,8 +6,8 @@ import os
 
 
 # API credentials
-api_key = 'svZecStgWNJNxVCdXadr'
-api_secret = 'cpJxYMiWPnHWOOXnsDeppfTBiBmwWmLR'
+api_key = 'YOUR_API_KEY'
+api_secret = 'YOUR_API_SECRET'
 
 # Updated list of genres, styles, and world music subgenres
 genres_styles = {
@@ -43,7 +43,7 @@ world_subgenres = {
 # Placeholder image URL and headers
 placeholder_substring = 'spacer.gif'
 headers = {
-    'User-Agent': 'music-dataset/1.0 +https://github.com/pandrum/music-dataset',
+    'User-Agent': 'YOUR_USER_AGENT_STRING',
     'Authorization': f'Discogs key={api_key}, secret={api_secret}'
 }
 
