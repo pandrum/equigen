@@ -27,7 +27,83 @@ This script loads the 'equigen_dataset.tsv' file, removes any duplicate entries,
 This script loads the cleaned 'equigen_dataset.tsv' file. It uses pandas to read the file and then counts the number of albums per genre in the dataset. The counts are then printed to the console.
 
 ### 5. download_equigen_images.py
-This script downloads album cover images from the Discogs API. It reads the 'equigen_dataset.tsv' and downloads the images for each album. The script saves each album cover into a directory with the same name as the albums respective genre. The script handles rate limiting by the API by implementing a backoff strategy.
+This script downloads album cover images from the Discogs API. It reads the 'equigen_dataset.tsv' and downloads the images for each album. The script saves each album cover into a directory with the same name as the albums respective genre. The The script handles rate limiting by the API by implementing a backoff strategy. The output results in the following structure:
+
+```
+equigen_album_images/
+│
+├── Blues/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Country/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Electronic/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Folk/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Jazz/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Latin/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Metal/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── New Age/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Pop/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Punk/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Rap/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Reggae/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+├── Rhythm & Blues/
+│   ├── (album_cover_1).jpg
+│   ├── (album_cover_2).jpg
+│   └── ...
+│
+└── Rock/
+    ├── (album_cover_1).jpg
+    ├── (album_cover_2).jpg
+    └── ...
+
+
+```
 
 ### 6. split.py
 This script uses the `split-folders` library to split the images in the 'equigen_album_images' folder into training, validation, and test sets. The split is done in a 70:15:15 ratio.
