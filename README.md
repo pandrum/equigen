@@ -27,7 +27,7 @@ This script loads the 'equigen_dataset.tsv' file, removes any duplicate entries,
 This script loads the cleaned 'equigen_dataset.tsv' file. It uses pandas to read the file and then counts the number of albums per genre in the dataset. The counts are then printed to the console.
 
 ### 5. download_equigen_images.py
-This script downloads album cover images from the Discogs API. It reads the 'equigen_dataset.tsv' and downloads the images for each album. The script saves each album cover into a directory with the same name as the albums respective genre. The The script handles rate limiting by the API by implementing a backoff strategy. The output results in the following structure:
+This script downloads album cover images from the Discogs API. It reads the 'equigen_dataset.tsv' and downloads the images for each album. The script saves each album cover into a directory with the same name as the albums respective genre. The script handles rate limiting by the API by implementing a backoff strategy. The output results in the following structure:
 
 ```
 equigen_album_images/
