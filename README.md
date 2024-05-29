@@ -105,8 +105,8 @@ equigen_album_images/
 
 ```
 
-### 6. split.py
-This script uses the `split-folders` library to split the images in the 'equigen_album_images' folder into training, validation, and test sets. The split is done in a 70:15:15 ratio.
+### 6. split.py (Optional)
+This script uses the `split-folders` library to split the images in the 'equigen_album_images' folder into training, validation, and test set with the chosen split ratio. 
 
 ## Usage
 To run the scripts in the correct order, use the following commands:
